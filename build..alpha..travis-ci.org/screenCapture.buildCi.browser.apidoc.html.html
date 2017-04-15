@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://webtorrent.io"
-
-    >webtorrent (v0.98.18)</a>
+    <a href="https://webtorrent.io">webtorrent (v0.98.18)</a>
 </h1>
 <h4>Streaming torrent client</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.webtorrent">module webtorrent</a><ol>
 
@@ -118,25 +111,25 @@
 
   if (!opts) opts = {}
 
-  if (typeof opts.peerId === &#x27;string&#x27;) {
+  if (typeof opts.peerId === 'string') {
     self.peerId = opts.peerId
   } else if (Buffer.isBuffer(opts.peerId)) {
-    self.peerId = opts.peerId.toString(&#x27;hex&#x27;)
+    self.peerId = opts.peerId.toString('hex')
   } else {
-    self.peerId = Buffer.from(VERSION_PREFIX + randombytes(9).toString(&#x27;base64&#x27;)).toString(&#x27;hex&#x27;)
+    self.peerId = Buffer.from(VERSION_PREFIX + randombytes(9).toString('base64')).toString('hex')
   }
-  self.peerIdBuffer = Buffer.from(self.peerId, &#x27;hex&#x27;)
+  self.peerIdBuffer = Buffer.from(self.peerId, 'hex')
 
-  if (typeof opts.nodeId === &#x27;string&#x27;) {
+  if (typeof opts.nodeId === 'string') {
     self.nodeId = opts.nodeId
   } else if (Buffer.isBuffer(opts.nodeId)) {
-    self.nodeId = opts.nodeId.toString(&#x27;hex&#x27;)
+    self.nodeId = opts.nodeId.toString('hex')
   } else {
-    self.nodeId = randombytes(20).toString(&#x27;hex&#x27;)
+    self.nodeId = randombytes(20).toString('hex')
   }
-  self.nodeIdBuffer = Buffer.from(self.nodeId, &#x27;hex&#x27;)
+  self.nodeIdBuffer = Buffer.from(self.nodeId, 'hex')
 
-  self._debugId = self.peerId.toString(&#x27;hex&#x27;).substring(0, 7)
+  self._debugId = self.peerId.toString('hex').substring(0, 7)
 
   self.destroyed = false
   self.listening = false
@@ -147,28 +140,28 @@
   self.maxConns = Number(opts.maxConns) || 55
 
   self._debug(
-    &#x27;new webtorrent (peerId %s, nodeId %s, port %s)&#x27;,
+    'new webtorrent (peerId %s, nodeId %s, port %s)',
     self.peerId, self.nodeId, self.torrentPort
   )
 
   if (self.tracker) {
-    if (typeof self.tracker !== &#x27;object&#x27;) self.tracker = {}
+    if (typeof self.tracker !== 'object') self.tracker = {}
     if (opts.rtcConfig) {
       // TODO: remove in v1
-      console.warn(&#x27;WebTorrent: opts.rtcConfig is deprecated. Use opts.tracker.rtcConfig instead&#x27;)
+      console.warn('WebTorrent: opts.rtcConfig is deprecated. Use opts.tracker.rtcConfig instead')
       self.tracker.rtcConfig = opts.rtcConfig
     }
     if (opts.wrtc) {
       // TODO: remove in v1
-      console.warn(&#x27;WebTorrent: opts.wrtc is deprecated. Use opts.tracker.wrtc instead&#x27;)
+      console.warn('WebTorrent: opts.wrtc is deprecated. Use opts.tracker.wrtc instead')
       self.tracker.wrtc = opts.wrtc
     }
-    if (global.WRTC &#x26;&#x26; !self.tracker.wrtc) {
+    if (global.WRTC &amp;&amp; !self.tracker.wrtc) {
       self.tracker.wrtc = global.WRTC
     }
   }
 
-  if (typeof TCPPool === &#x27;function&#x27;) {
+  if (typeof TCPPool === 'function') {
     self._tcpPool = new TCPPool(self)
   } else {
     process.nextTick(function () {
@@ -180,20 +173,20 @@
   self._downloadSpeed = speedometer()
   self._uploadSpeed = speedometer()
 
-  if (opts.dht !== false &#x26;&#x26; typeof DHT === &#x27;function&#x27; /* browser exclude */) {
+  if (opts.dht !== false &amp;&amp; typeof DHT === 'function' /* browser exclude */) {
     // use a single DHT instance for all torrents, so the routing table can be reused
     self.dht = new DHT(extend({ nodeId: self.nodeId }, opts.dht))
 
-    self.dht.once(&#x27;error&#x27;, function (err) {
+    self.dht.once('error', function (err) {
       self._destroy(err)
     })
 
-    self.dht.once(&#x27;listening&#x27;, function () {
+    self.dht.once('listening', function () {
       var address = self.dht.address()
       if (address) self.dhtPort = address.port
     })
 
-    // Ignore warning when there are &#x3e; 10 torrents in the client
+    // Ignore warning when there are &gt; 10 torrents in the client
     self.dht.setMaxListeners(0)
 
     self.dht.listen(self.dhtPort)
@@ -204,13 +197,13 @@
   // Enable or disable BEP19 (Web Seeds). Enabled by default:
   self.enableWebSeeds = opts.webSeeds !== false
 
-  if (typeof loadIPSet === &#x27;function&#x27; &#x26;&#x26; opts.blocklist != null) {
+  if (typeof loadIPSet === 'function' &amp;&amp; opts.blocklist != null) {
     loadIPSet(opts.blocklist, {
       headers: {
-        &#x27;user-agent&#x27;: &#x27;WebTorrent/&#x27; + VERSION + &#x27; (https://webtorrent.io)&#x27;
+        'user-agent': 'WebTorrent/' + VERSION + ' (https://webtorrent.io)'
       }
     }, function (err, ipSet) {
-      if (err) return self.error(&#x27;Failed to load blocklist: &#x27; + err.message)
+      if (err) return self.error('Failed to load blocklist: ' + err.message)
       self.blocked = ipSet
       ready()
     })
@@ -221,7 +214,7 @@
   function ready () {
     if (self.destroyed) return
     self.ready = true
-    self.emit(&#x27;ready&#x27;)
+    self.emit('ready')
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -259,16 +252,16 @@ EventEmitter.call(self)
 
 if (!opts) opts = {}
 
-if (typeof opts.peerId === &#x27;string&#x27;) {
+if (typeof opts.peerId === 'string') {
   self.peerId = opts.peerId
 } else if (Buffer.isBuffer(opts.peerId)) {
-  self.peerId = opts.peerId.<span class="apidocCodeKeywordSpan">toString</span>(&#x27;hex&#x27;)
+  self.peerId = opts.peerId.<span class="apidocCodeKeywordSpan">toString</span>('hex')
 } else {
-  self.peerId = Buffer.from(VERSION_PREFIX + randombytes(9).toString(&#x27;base64&#x27;)).toString(&#x27;hex&#x27;)
+  self.peerId = Buffer.from(VERSION_PREFIX + randombytes(9).toString('base64')).toString('hex')
 }
-self.peerIdBuffer = Buffer.from(self.peerId, &#x27;hex&#x27;)
+self.peerIdBuffer = Buffer.from(self.peerId, 'hex')
 
-if (typeof opts.nodeId === &#x27;string&#x27;) {
+if (typeof opts.nodeId === 'string') {
   self.nodeId = opts.nodeId
 ...</pre></li>
     </ul>
@@ -282,3 +275,4 @@ if (typeof opts.nodeId === &#x27;string&#x27;) {
     ]
 </div>
 </div>
+</body></html>

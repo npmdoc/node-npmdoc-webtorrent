@@ -30,13 +30,13 @@
 <tspan x="10" y="442">  │ │ └── wrappy@1.0.2 </tspan>
 <tspan x="10" y="458">  │ └─┬ piece-length@1.0.0 </tspan>
 <tspan x="10" y="474">  │   └── closest-to@2.0.0 </tspan>
-<tspan x="10" y="490">  ├─┬ debug@2.6.3 </tspan>
-<tspan x="10" y="506">  │ └── ms@0.7.2 </tspan>
+<tspan x="10" y="490">  ├─┬ debug@2.6.4 </tspan>
+<tspan x="10" y="506">  │ └── ms@0.7.3 </tspan>
 <tspan x="10" y="522">  ├── end-of-stream@1.4.0 </tspan>
 <tspan x="10" y="538">  ├─┬ fs-chunk-store@1.6.5 </tspan>
 <tspan x="10" y="554">  │ ├─┬ mkdirp@0.5.1 </tspan>
 <tspan x="10" y="570">  │ │ └── minimist@0.0.8 </tspan>
-<tspan x="10" y="586">  │ ├─┬ random-access-file@1.6.1 </tspan>
+<tspan x="10" y="586">  │ ├─┬ random-access-file@1.7.0 </tspan>
 <tspan x="10" y="602">  │ │ └── buffer-alloc-unsafe@1.0.0 </tspan>
 <tspan x="10" y="618">  │ ├─┬ rimraf@2.6.1 </tspan>
 <tspan x="10" y="634">  │ │ └─┬ glob@7.1.1 </tspan>
@@ -146,7 +146,7 @@
 <tspan x="10" y="2298">  │   │   └── tunnel-agent@0.4.3 </tspan>
 <tspan x="10" y="2314">  │   ├── run-series@1.1.4 </tspan>
 <tspan x="10" y="2330">  │   ├── simple-websocket@5.0.2 </tspan>
-<tspan x="10" y="2346">  │   └─┬ ws@2.2.3 </tspan>
+<tspan x="10" y="2346">  │   └─┬ ws@2.3.1 </tspan>
 <tspan x="10" y="2362">  │     └── ultron@1.1.0 </tspan>
 <tspan x="10" y="2378">  ├── torrent-piece@1.1.1 </tspan>
 <tspan x="10" y="2394">  ├── uniq@1.0.1 </tspan>

@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://webtorrent.io"
-
-    >webtorrent (v0.98.18)</a>
+    <a href="https://webtorrent.io">webtorrent (v0.98.18)</a>
 </h1>
 <h4>Streaming torrent client</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.webtorrent">module webtorrent</a><ol>
 
@@ -382,7 +375,7 @@
 
   if (this.length === 0) {
     this.done = true
-    this.emit(&#x27;done&#x27;)
+    this.emit('done')
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -403,8 +396,8 @@
   this.destroyed = false
   this._torrent = file._torrent
 
-  var start = (opts &#x26;&#x26; opts.start) || 0
-  var end = (opts &#x26;&#x26; opts.end &#x26;&#x26; opts.end &#x3c; file.length)
+  var start = (opts &amp;&amp; opts.start) || 0
+  var end = (opts &amp;&amp; opts.end &amp;&amp; opts.end &lt; file.length)
     ? opts.end
     : file.length - 1
 
@@ -454,7 +447,7 @@
   self._torrent.wires.forEach(function (wire) {
     self._initWire(wire)
   })
-  self._torrent.on(&#x27;wire&#x27;, self._onWire)
+  self._torrent.on('wire', self._onWire)
   self.recalculate()
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -501,7 +494,7 @@
 
   if (this.length === 0) {
     this.done = true
-    this.emit(&#x27;done&#x27;)
+    this.emit('done')
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -543,15 +536,15 @@
     <li>example usage<pre class="apidocCodePre">...
   self._uploadSpeed = speedometer()
 
-  if (opts.dht !== false &#x26;&#x26; typeof DHT === &#x27;function&#x27; /* browser exclude */) {
+  if (opts.dht !== false &amp;&amp; typeof DHT === 'function' /* browser exclude */) {
 // use a single DHT instance for all torrents, so the routing table can be reused
 self.dht = new DHT(extend({ nodeId: self.nodeId }, opts.dht))
 
-self.dht.once(&#x27;error&#x27;, function (err) {
+self.dht.once('error', function (err) {
   self.<span class="apidocCodeKeywordSpan">_destroy</span>(err)
 })
 
-self.dht.once(&#x27;listening&#x27;, function () {
+self.dht.once('listening', function () {
   var address = self.dht.address()
   if (address) self.dhtPort = address.port
 })
@@ -577,12 +570,12 @@ File.prototype.getBuffer = function (cb) {
 }
 
 File.prototype.getBlob = function (cb) {
-  if (typeof window === &#x27;undefined&#x27;) throw new Error(&#x27;browser-only method&#x27;)
+  if (typeof window === 'undefined') throw new Error('browser-only method')
   streamToBlob(this.createReadStream(), this.<span class="apidocCodeKeywordSpan">_getMimeType</span>(), cb)
 }
 
 File.prototype.getBlobURL = function (cb) {
-  if (typeof window === &#x27;undefined&#x27;) throw new Error(&#x27;browser-only method&#x27;)
+  if (typeof window === 'undefined') throw new Error('browser-only method')
   streamToBlobURL(this.createReadStream(), this._getMimeType(), cb)
 }
 ...</pre></li>
@@ -598,18 +591,18 @@ File.prototype.getBlobURL = function (cb) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">appendTo = function (elem, opts, cb) {
-  if (typeof window === &#x27;undefined&#x27;) throw new Error(&#x27;browser-only method&#x27;)
+  if (typeof window === 'undefined') throw new Error('browser-only method')
   render.append(this, elem, opts, cb)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 client.add(magnetURI, function (torrent) {
   // Got torrent metadata!
-  console.log(&#x27;Client is downloading:&#x27;, torrent.infoHash)
+  console.log('Client is downloading:', torrent.infoHash)
 
   torrent.files.forEach(function (file) {
     // Display the file by appending it to the DOM. Supports video, audio, images, and
     // more. Specify a container element (CSS selector or reference to DOM node).
-    file.<span class="apidocCodeKeywordSpan">appendTo</span>(&#x27;body&#x27;)
+    file.<span class="apidocCodeKeywordSpan">appendTo</span>('body')
   })
 })
 ```
@@ -663,7 +656,7 @@ File.prototype.getBuffer = function (cb) {
 }
 
 File.prototype.getBlob = function (cb) {
-  if (typeof window === &#x27;undefined&#x27;) throw new Error(&#x27;browser-only method&#x27;)
+  if (typeof window === 'undefined') throw new Error('browser-only method')
   streamToBlob(this.createReadStream(), this._getMimeType(), cb)
 }
 ...</pre></li>
@@ -711,7 +704,7 @@ if (this.length === 0) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getBlob = function (cb) {
-  if (typeof window === &#x27;undefined&#x27;) throw new Error(&#x27;browser-only method&#x27;)
+  if (typeof window === 'undefined') throw new Error('browser-only method')
   streamToBlob(this.createReadStream(), this._getMimeType(), cb)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -727,7 +720,7 @@ if (this.length === 0) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getBlobURL = function (cb) {
-  if (typeof window === &#x27;undefined&#x27;) throw new Error(&#x27;browser-only method&#x27;)
+  if (typeof window === 'undefined') throw new Error('browser-only method')
   streamToBlobURL(this.createReadStream(), this._getMimeType(), cb)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -758,7 +751,7 @@ if (this.length === 0) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">renderTo = function (elem, opts, cb) {
-  if (typeof window === &#x27;undefined&#x27;) throw new Error(&#x27;browser-only method&#x27;)
+  if (typeof window === 'undefined') throw new Error('browser-only method')
   render.render(this, elem, opts, cb)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -815,8 +808,8 @@ File.prototype.deselect = function () {
   this.destroyed = false
   this._torrent = file._torrent
 
-  var start = (opts &#x26;&#x26; opts.start) || 0
-  var end = (opts &#x26;&#x26; opts.end &#x26;&#x26; opts.end &#x3c; file.length)
+  var start = (opts &amp;&amp; opts.start) || 0
+  var end = (opts &amp;&amp; opts.end &amp;&amp; opts.end &lt; file.length)
     ? opts.end
     : file.length - 1
 
@@ -846,7 +839,7 @@ File.prototype.deselect = function () {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Readable(options) {
-  Duplex = Duplex || require(&#x27;./_stream_duplex&#x27;);
+  Duplex = Duplex || require('./_stream_duplex');
 
   if (!(this instanceof Readable)) return new Readable(options);
 
@@ -855,7 +848,7 @@ File.prototype.deselect = function () {
   // legacy
   this.readable = true;
 
-  if (options &#x26;&#x26; typeof options.read === &#x27;function&#x27;) this._read = options.read;
+  if (options &amp;&amp; typeof options.read === 'function') this._read = options.read;
 
   Stream.call(this);
 }</pre></li>
@@ -884,22 +877,22 @@ File.prototype.deselect = function () {
     this._torrent.deselect(this._startPiece, this._endPiece, true)
   }
 
-  if (err) this.emit(&#x27;error&#x27;, err)
-  this.emit(&#x27;close&#x27;)
+  if (err) this.emit('error', err)
+  this.emit('close')
   if (onclose) onclose()
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   self._uploadSpeed = speedometer()
 
-  if (opts.dht !== false &#x26;&#x26; typeof DHT === &#x27;function&#x27; /* browser exclude */) {
+  if (opts.dht !== false &amp;&amp; typeof DHT === 'function' /* browser exclude */) {
 // use a single DHT instance for all torrents, so the routing table can be reused
 self.dht = new DHT(extend({ nodeId: self.nodeId }, opts.dht))
 
-self.dht.once(&#x27;error&#x27;, function (err) {
+self.dht.once('error', function (err) {
   self.<span class="apidocCodeKeywordSpan">_destroy</span>(err)
 })
 
-self.dht.once(&#x27;listening&#x27;, function () {
+self.dht.once('listening', function () {
   var address = self.dht.address()
   if (address) self.dhtPort = address.port
 })
@@ -931,19 +924,19 @@ self.dht.once(&#x27;listening&#x27;, function () {
     self._notifying = false
     if (self.destroyed) return
     if (err) return self._destroy(err)
-    debug(&#x27;read %s (length %s) (err %s)&#x27;, p, buffer.length, err &#x26;&#x26; err.message)
+    debug('read %s (length %s) (err %s)', p, buffer.length, err &amp;&amp; err.message)
 
     if (self._offset) {
       buffer = buffer.slice(self._offset)
       self._offset = 0
     }
 
-    if (self._missing &#x3c; buffer.length) {
+    if (self._missing &lt; buffer.length) {
       buffer = buffer.slice(0, self._missing)
     }
     self._missing -= buffer.length
 
-    debug(&#x27;pushing buffer of length %s&#x27;, buffer.length)
+    debug('pushing buffer of length %s', buffer.length)
     self._reading = false
     self.push(buffer)
 
@@ -1014,7 +1007,7 @@ WebTorrent.prototype.address = function () {
 if (!this.listening) return null
 return this._tcpPool
   ? this._tcpPool.server.address()
-  : { address: &#x27;0.0.0.0&#x27;, family: &#x27;IPv4&#x27;, port: 0 }
+  : { address: '0.0.0.0', family: 'IPv4', port: 0 }
 ...</pre></li>
     </ul>
 
@@ -1053,7 +1046,7 @@ return this._tcpPool
   self._torrent.wires.forEach(function (wire) {
     self._initWire(wire)
   })
-  self._torrent.on(&#x27;wire&#x27;, self._onWire)
+  self._torrent.on('wire', self._onWire)
   self.recalculate()
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1074,9 +1067,9 @@ return this._tcpPool
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_cleanupWireEvents = function (wire) {
-  wire.removeListener(&#x27;have&#x27;, this._onWireHave)
-  wire.removeListener(&#x27;bitfield&#x27;, this._onWireBitfield)
-  if (wire._onClose) wire.removeListener(&#x27;close&#x27;, wire._onClose)
+  wire.removeListener('have', this._onWireHave)
+  wire.removeListener('bitfield', this._onWireBitfield)
+  if (wire._onClose) wire.removeListener('close', wire._onClose)
   wire._onClose = null
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -1085,7 +1078,7 @@ return this._tcpPool
 
 RarityMap.prototype.destroy = function () {
 var self = this
-self._torrent.removeListener(&#x27;wire&#x27;, self._onWire)
+self._torrent.removeListener('wire', self._onWire)
 self._torrent.wires.forEach(function (wire) {
   self.<span class="apidocCodeKeywordSpan">_cleanupWireEvents</span>(wire)
 })
@@ -1112,14 +1105,14 @@ self._onWireBitfield = null
 
   wire._onClose = function () {
     self._cleanupWireEvents(wire)
-    for (var i = 0; i &#x3c; this._numPieces; ++i) {
+    for (var i = 0; i &lt; this._numPieces; ++i) {
       self._pieces[i] -= wire.peerPieces.get(i)
     }
   }
 
-  wire.on(&#x27;have&#x27;, self._onWireHave)
-  wire.on(&#x27;bitfield&#x27;, self._onWireBitfield)
-  wire.once(&#x27;close&#x27;, wire._onClose)
+  wire.on('have', self._onWireHave)
+  wire.on('bitfield', self._onWireBitfield)
+  wire.once('close', wire._onClose)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
@@ -1151,7 +1144,7 @@ self._onWireBitfield = function () {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">destroy = function () {
   var self = this
-  self._torrent.removeListener(&#x27;wire&#x27;, self._onWire)
+  self._torrent.removeListener('wire', self._onWire)
   self._torrent.wires.forEach(function (wire) {
     self._cleanupWireEvents(wire)
   })
@@ -1177,7 +1170,7 @@ WebTorrent.prototype.address = function () {
 if (!this.listening) return null
 return this._tcpPool
   ? this._tcpPool.server.address()
-  : { address: &#x27;0.0.0.0&#x27;, family: &#x27;IPv4&#x27;, port: 0 }
+  : { address: '0.0.0.0', family: 'IPv4', port: 0 }
 ...</pre></li>
     </ul>
 
@@ -1196,19 +1189,19 @@ return this._tcpPool
   var candidates = []
   var min = Infinity
 
-  for (var i = 0; i &#x3c; this._numPieces; ++i) {
+  for (var i = 0; i &lt; this._numPieces; ++i) {
     if (!pieceFilterFunc(i)) continue
 
     var availability = this._pieces[i]
     if (availability === min) {
       candidates.push(i)
-    } else if (availability &#x3c; min) {
+    } else if (availability &lt; min) {
       candidates = [ i ]
       min = availability
     }
   }
 
-  if (candidates.length &#x3e; 0) {
+  if (candidates.length &gt; 0) {
     // if there are multiple pieces with the same availability, choose one randomly
     return candidates[Math.random() * candidates.length | 0]
   } else {
@@ -1229,14 +1222,14 @@ return this._tcpPool
     <ul>
     <li>description and source-code<pre class="apidocCodePre">recalculate = function () {
   var i
-  for (i = 0; i &#x3c; this._numPieces; ++i) {
+  for (i = 0; i &lt; this._numPieces; ++i) {
     this._pieces[i] = 0
   }
 
   var numWires = this._torrent.wires.length
-  for (i = 0; i &#x3c; numWires; ++i) {
+  for (i = 0; i &lt; numWires; ++i) {
     var wire = this._torrent.wires[i]
-    for (var j = 0; j &#x3c; this._numPieces; ++j) {
+    for (var j = 0; j &lt; this._numPieces; ++j) {
       this._pieces[j] += wire.peerPieces.get(j)
     }
   }
@@ -1269,3 +1262,4 @@ self._onWireBitfield = function () {
     ]
 </div>
 </div>
+</body></html>

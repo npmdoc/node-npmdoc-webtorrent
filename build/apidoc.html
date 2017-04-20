@@ -63,23 +63,79 @@
 
         <li>
 
-            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">webtorrent.</span>WEBRTC_SUPPORT</span>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.webtorrent">
-            function <span class="apidocSignatureSpan"></span>webtorrent
-            <span class="apidocSignatureSpan">(opts)</span>
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file">
+            function <span class="apidocSignatureSpan">webtorrent.</span>file
+            <span class="apidocSignatureSpan">(torrent, file)</span>
             </a>
 
         </li>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.super_">
-            function <span class="apidocSignatureSpan">webtorrent.</span>super_
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file_stream">
+            function <span class="apidocSignatureSpan">webtorrent.</span>file_stream
+            <span class="apidocSignatureSpan">(file, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.rarity_map">
+            function <span class="apidocSignatureSpan">webtorrent.</span>rarity_map
+            <span class="apidocSignatureSpan">(torrent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">webtorrent.</span>file.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">webtorrent.</span>file_stream.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">webtorrent.</span>rarity_map.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webtorrent.file">module webtorrent.file</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file.file">
+            function <span class="apidocSignatureSpan">webtorrent.</span>file
+            <span class="apidocSignatureSpan">(torrent, file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file.super_">
+            function <span class="apidocSignatureSpan">webtorrent.file.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webtorrent.file.prototype">module webtorrent.file.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file.prototype._destroy">
+            function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>_destroy
             <span class="apidocSignatureSpan">()</span>
             </a>
 
@@ -87,8 +143,204 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.toString">
-            function <span class="apidocSignatureSpan">webtorrent.</span>toString
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file.prototype._getMimeType">
+            function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>_getMimeType
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file.prototype.appendTo">
+            function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>appendTo
+            <span class="apidocSignatureSpan">(elem, opts, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file.prototype.createReadStream">
+            function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>createReadStream
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file.prototype.deselect">
+            function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>deselect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file.prototype.getBlob">
+            function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>getBlob
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file.prototype.getBlobURL">
+            function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>getBlobURL
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file.prototype.getBuffer">
+            function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>getBuffer
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file.prototype.renderTo">
+            function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>renderTo
+            <span class="apidocSignatureSpan">(elem, opts, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file.prototype.select">
+            function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>select
+            <span class="apidocSignatureSpan">(priority)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webtorrent.file_stream">module webtorrent.file_stream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file_stream.file_stream">
+            function <span class="apidocSignatureSpan">webtorrent.</span>file_stream
+            <span class="apidocSignatureSpan">(file, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file_stream.super_">
+            function <span class="apidocSignatureSpan">webtorrent.file_stream.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webtorrent.file_stream.prototype">module webtorrent.file_stream.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file_stream.prototype._destroy">
+            function <span class="apidocSignatureSpan">webtorrent.file_stream.prototype.</span>_destroy
+            <span class="apidocSignatureSpan">(err, onclose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file_stream.prototype._notify">
+            function <span class="apidocSignatureSpan">webtorrent.file_stream.prototype.</span>_notify
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file_stream.prototype._read">
+            function <span class="apidocSignatureSpan">webtorrent.file_stream.prototype.</span>_read
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.file_stream.prototype.destroy">
+            function <span class="apidocSignatureSpan">webtorrent.file_stream.prototype.</span>destroy
+            <span class="apidocSignatureSpan">(onclose)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webtorrent.rarity_map">module webtorrent.rarity_map</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.rarity_map.rarity_map">
+            function <span class="apidocSignatureSpan">webtorrent.</span>rarity_map
+            <span class="apidocSignatureSpan">(torrent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webtorrent.rarity_map.prototype">module webtorrent.rarity_map.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.rarity_map.prototype._cleanupWireEvents">
+            function <span class="apidocSignatureSpan">webtorrent.rarity_map.prototype.</span>_cleanupWireEvents
+            <span class="apidocSignatureSpan">(wire)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.rarity_map.prototype._initWire">
+            function <span class="apidocSignatureSpan">webtorrent.rarity_map.prototype.</span>_initWire
+            <span class="apidocSignatureSpan">(wire)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.rarity_map.prototype.destroy">
+            function <span class="apidocSignatureSpan">webtorrent.rarity_map.prototype.</span>destroy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.rarity_map.prototype.getRarestPiece">
+            function <span class="apidocSignatureSpan">webtorrent.rarity_map.prototype.</span>getRarestPiece
+            <span class="apidocSignatureSpan">(pieceFilterFunc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webtorrent.rarity_map.prototype.recalculate">
+            function <span class="apidocSignatureSpan">webtorrent.rarity_map.prototype.</span>recalculate
             <span class="apidocSignatureSpan">()</span>
             </a>
 
@@ -102,126 +354,35 @@
 <h1><a href="#apidoc.module.webtorrent" id="apidoc.module.webtorrent">module webtorrent</a></h1>
 
 
-
-
     <h2>
-        <a href="#apidoc.element.webtorrent.webtorrent" id="apidoc.element.webtorrent.webtorrent">
-        function <span class="apidocSignatureSpan"></span>webtorrent
-        <span class="apidocSignatureSpan">(opts)</span>
+        <a href="#apidoc.element.webtorrent.file" id="apidoc.element.webtorrent.file">
+        function <span class="apidocSignatureSpan">webtorrent.</span>file
+        <span class="apidocSignatureSpan">(torrent, file)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function WebTorrent(opts) {
-  var self = this
-  if (!(self instanceof WebTorrent)) return new WebTorrent(opts)
-  EventEmitter.call(self)
+    <li>description and source-code<pre class="apidocCodePre">function File(torrent, file) {
+  EventEmitter.call(this)
 
-  if (!opts) opts = {}
+  this._torrent = torrent
+  this._destroyed = false
 
-  if (typeof opts.peerId === &#x27;string&#x27;) {
-    self.peerId = opts.peerId
-  } else if (Buffer.isBuffer(opts.peerId)) {
-    self.peerId = opts.peerId.toString(&#x27;hex&#x27;)
-  } else {
-    self.peerId = Buffer.from(VERSION_PREFIX + randombytes(9).toString(&#x27;base64&#x27;)).toString(&#x27;hex&#x27;)
-  }
-  self.peerIdBuffer = Buffer.from(self.peerId, &#x27;hex&#x27;)
+  this.name = file.name
+  this.path = file.path
+  this.length = file.length
+  this.offset = file.offset
 
-  if (typeof opts.nodeId === &#x27;string&#x27;) {
-    self.nodeId = opts.nodeId
-  } else if (Buffer.isBuffer(opts.nodeId)) {
-    self.nodeId = opts.nodeId.toString(&#x27;hex&#x27;)
-  } else {
-    self.nodeId = randombytes(20).toString(&#x27;hex&#x27;)
-  }
-  self.nodeIdBuffer = Buffer.from(self.nodeId, &#x27;hex&#x27;)
+  this.done = false
 
-  self._debugId = self.peerId.toString(&#x27;hex&#x27;).substring(0, 7)
+  var start = file.offset
+  var end = start + file.length - 1
 
-  self.destroyed = false
-  self.listening = false
-  self.torrentPort = opts.torrentPort || 0
-  self.dhtPort = opts.dhtPort || 0
-  self.tracker = opts.tracker !== undefined ? opts.tracker : {}
-  self.torrents = []
-  self.maxConns = Number(opts.maxConns) || 55
+  this._startPiece = start / this._torrent.pieceLength | 0
+  this._endPiece = end / this._torrent.pieceLength | 0
 
-  self._debug(
-    &#x27;new webtorrent (peerId %s, nodeId %s, port %s)&#x27;,
-    self.peerId, self.nodeId, self.torrentPort
-  )
-
-  if (self.tracker) {
-    if (typeof self.tracker !== &#x27;object&#x27;) self.tracker = {}
-    if (opts.rtcConfig) {
-      // TODO: remove in v1
-      console.warn(&#x27;WebTorrent: opts.rtcConfig is deprecated. Use opts.tracker.rtcConfig instead&#x27;)
-      self.tracker.rtcConfig = opts.rtcConfig
-    }
-    if (opts.wrtc) {
-      // TODO: remove in v1
-      console.warn(&#x27;WebTorrent: opts.wrtc is deprecated. Use opts.tracker.wrtc instead&#x27;)
-      self.tracker.wrtc = opts.wrtc
-    }
-    if (global.WRTC &#x26;&#x26; !self.tracker.wrtc) {
-      self.tracker.wrtc = global.WRTC
-    }
-  }
-
-  if (typeof TCPPool === &#x27;function&#x27;) {
-    self._tcpPool = new TCPPool(self)
-  } else {
-    process.nextTick(function () {
-      self._onListening()
-    })
-  }
-
-  // stats
-  self._downloadSpeed = speedometer()
-  self._uploadSpeed = speedometer()
-
-  if (opts.dht !== false &#x26;&#x26; typeof DHT === &#x27;function&#x27; /* browser exclude */) {
-    // use a single DHT instance for all torrents, so the routing table can be reused
-    self.dht = new DHT(extend({ nodeId: self.nodeId }, opts.dht))
-
-    self.dht.once(&#x27;error&#x27;, function (err) {
-      self._destroy(err)
-    })
-
-    self.dht.once(&#x27;listening&#x27;, function () {
-      var address = self.dht.address()
-      if (address) self.dhtPort = address.port
-    })
-
-    // Ignore warning when there are &#x3e; 10 torrents in the client
-    self.dht.setMaxListeners(0)
-
-    self.dht.listen(self.dhtPort)
-  } else {
-    self.dht = false
-  }
-
-  // Enable or disable BEP19 (Web Seeds). Enabled by default:
-  self.enableWebSeeds = opts.webSeeds !== false
-
-  if (typeof loadIPSet === &#x27;function&#x27; &#x26;&#x26; opts.blocklist != null) {
-    loadIPSet(opts.blocklist, {
-      headers: {
-        &#x27;user-agent&#x27;: &#x27;WebTorrent/&#x27; + VERSION + &#x27; (https://webtorrent.io)&#x27;
-      }
-    }, function (err, ipSet) {
-      if (err) return self.error(&#x27;Failed to load blocklist: &#x27; + err.message)
-      self.blocked = ipSet
-      ready()
-    })
-  } else {
-    process.nextTick(ready)
-  }
-
-  function ready () {
-    if (self.destroyed) return
-    self.ready = true
-    self.emit(&#x27;ready&#x27;)
+  if (this.length === 0) {
+    this.done = true
+    this.emit(&#x27;done&#x27;)
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -230,8 +391,127 @@
 
 
     <h2>
-        <a href="#apidoc.element.webtorrent.super_" id="apidoc.element.webtorrent.super_">
-        function <span class="apidocSignatureSpan">webtorrent.</span>super_
+        <a href="#apidoc.element.webtorrent.file_stream" id="apidoc.element.webtorrent.file_stream">
+        function <span class="apidocSignatureSpan">webtorrent.</span>file_stream
+        <span class="apidocSignatureSpan">(file, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FileStream(file, opts) {
+  stream.Readable.call(this, opts)
+
+  this.destroyed = false
+  this._torrent = file._torrent
+
+  var start = (opts &#x26;&#x26; opts.start) || 0
+  var end = (opts &#x26;&#x26; opts.end &#x26;&#x26; opts.end &#x3c; file.length)
+    ? opts.end
+    : file.length - 1
+
+  var pieceLength = file._torrent.pieceLength
+
+  this._startPiece = (start + file.offset) / pieceLength | 0
+  this._endPiece = (end + file.offset) / pieceLength | 0
+
+  this._piece = this._startPiece
+  this._offset = (start + file.offset) - (this._startPiece * pieceLength)
+
+  this._missing = end - start + 1
+  this._reading = false
+  this._notifying = false
+  this._criticalLength = Math.min((1024 * 1024 / pieceLength) | 0, 2)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.rarity_map" id="apidoc.element.webtorrent.rarity_map">
+        function <span class="apidocSignatureSpan">webtorrent.</span>rarity_map
+        <span class="apidocSignatureSpan">(torrent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RarityMap(torrent) {
+  var self = this
+
+  self._torrent = torrent
+  self._numPieces = torrent.pieces.length
+  self._pieces = []
+
+  self._onWire = function (wire) {
+    self.recalculate()
+    self._initWire(wire)
+  }
+  self._onWireHave = function (index) {
+    self._pieces[index] += 1
+  }
+  self._onWireBitfield = function () {
+    self.recalculate()
+  }
+
+  self._torrent.wires.forEach(function (wire) {
+    self._initWire(wire)
+  })
+  self._torrent.on(&#x27;wire&#x27;, self._onWire)
+  self.recalculate()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webtorrent.file" id="apidoc.module.webtorrent.file">module webtorrent.file</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file.file" id="apidoc.element.webtorrent.file.file">
+        function <span class="apidocSignatureSpan">webtorrent.</span>file
+        <span class="apidocSignatureSpan">(torrent, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function File(torrent, file) {
+  EventEmitter.call(this)
+
+  this._torrent = torrent
+  this._destroyed = false
+
+  this.name = file.name
+  this.path = file.path
+  this.length = file.length
+  this.offset = file.offset
+
+  this.done = false
+
+  var start = file.offset
+  var end = start + file.length - 1
+
+  this._startPiece = start / this._torrent.pieceLength | 0
+  this._endPiece = end / this._torrent.pieceLength | 0
+
+  if (this.length === 0) {
+    this.done = true
+    this.emit(&#x27;done&#x27;)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file.super_" id="apidoc.element.webtorrent.file.super_">
+        function <span class="apidocSignatureSpan">webtorrent.file.</span>super_
         <span class="apidocSignatureSpan">()</span>
         </a>
     </h2>
@@ -243,33 +523,740 @@
     </ul>
 
 
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webtorrent.file.prototype" id="apidoc.module.webtorrent.file.prototype">module webtorrent.file.prototype</a></h1>
+
 
     <h2>
-        <a href="#apidoc.element.webtorrent.toString" id="apidoc.element.webtorrent.toString">
-        function <span class="apidocSignatureSpan">webtorrent.</span>toString
+        <a href="#apidoc.element.webtorrent.file.prototype._destroy" id="apidoc.element.webtorrent.file.prototype._destroy">
+        function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>_destroy
         <span class="apidocSignatureSpan">()</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return toString;
+    <li>description and source-code<pre class="apidocCodePre">_destroy = function () {
+  this._destroyed = true
+  this._torrent = null
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-EventEmitter.call(self)
+  self._uploadSpeed = speedometer()
 
-if (!opts) opts = {}
+  if (opts.dht !== false &#x26;&#x26; typeof DHT === &#x27;function&#x27; /* browser exclude */) {
+// use a single DHT instance for all torrents, so the routing table can be reused
+self.dht = new DHT(extend({ nodeId: self.nodeId }, opts.dht))
 
-if (typeof opts.peerId === &#x27;string&#x27;) {
-  self.peerId = opts.peerId
-} else if (Buffer.isBuffer(opts.peerId)) {
-  self.peerId = opts.peerId.<span class="apidocCodeKeywordSpan">toString</span>(&#x27;hex&#x27;)
-} else {
-  self.peerId = Buffer.from(VERSION_PREFIX + randombytes(9).toString(&#x27;base64&#x27;)).toString(&#x27;hex&#x27;)
+self.dht.once(&#x27;error&#x27;, function (err) {
+  self.<span class="apidocCodeKeywordSpan">_destroy</span>(err)
+})
+
+self.dht.once(&#x27;listening&#x27;, function () {
+  var address = self.dht.address()
+  if (address) self.dhtPort = address.port
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file.prototype._getMimeType" id="apidoc.element.webtorrent.file.prototype._getMimeType">
+        function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>_getMimeType
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getMimeType = function () {
+  return render.mime[path.extname(this.name).toLowerCase()]
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+File.prototype.getBuffer = function (cb) {
+  streamToBuffer(this.createReadStream(), this.length, cb)
 }
-self.peerIdBuffer = Buffer.from(self.peerId, &#x27;hex&#x27;)
 
-if (typeof opts.nodeId === &#x27;string&#x27;) {
-  self.nodeId = opts.nodeId
+File.prototype.getBlob = function (cb) {
+  if (typeof window === &#x27;undefined&#x27;) throw new Error(&#x27;browser-only method&#x27;)
+  streamToBlob(this.createReadStream(), this.<span class="apidocCodeKeywordSpan">_getMimeType</span>(), cb)
+}
+
+File.prototype.getBlobURL = function (cb) {
+  if (typeof window === &#x27;undefined&#x27;) throw new Error(&#x27;browser-only method&#x27;)
+  streamToBlobURL(this.createReadStream(), this._getMimeType(), cb)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file.prototype.appendTo" id="apidoc.element.webtorrent.file.prototype.appendTo">
+        function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>appendTo
+        <span class="apidocSignatureSpan">(elem, opts, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">appendTo = function (elem, opts, cb) {
+  if (typeof window === &#x27;undefined&#x27;) throw new Error(&#x27;browser-only method&#x27;)
+  render.append(this, elem, opts, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+client.add(magnetURI, function (torrent) {
+  // Got torrent metadata!
+  console.log(&#x27;Client is downloading:&#x27;, torrent.infoHash)
+
+  torrent.files.forEach(function (file) {
+    // Display the file by appending it to the DOM. Supports video, audio, images, and
+    // more. Specify a container element (CSS selector or reference to DOM node).
+    file.<span class="apidocCodeKeywordSpan">appendTo</span>(&#x27;body&#x27;)
+  })
+})
+```
+
+##### Seeding a file is simple, too:
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file.prototype.createReadStream" id="apidoc.element.webtorrent.file.prototype.createReadStream">
+        function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>createReadStream
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createReadStream = function (opts) {
+  var self = this
+  if (this.length === 0) {
+    var empty = new stream.PassThrough()
+    process.nextTick(function () {
+      empty.end()
+    })
+    return empty
+  }
+
+  var fileStream = new FileStream(self, opts)
+  self._torrent.select(fileStream._startPiece, fileStream._endPiece, true, function () {
+    fileStream._notify()
+  })
+  eos(fileStream, function () {
+    if (self._destroyed) return
+    if (!self._torrent.destroyed) {
+      self._torrent.deselect(fileStream._startPiece, fileStream._endPiece, true)
+    }
+  })
+  return fileStream
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      self._torrent.deselect(fileStream._startPiece, fileStream._endPiece, true)
+    }
+  })
+  return fileStream
+}
+
+File.prototype.getBuffer = function (cb) {
+  streamToBuffer(this.<span class="apidocCodeKeywordSpan">createReadStream</span>(), this.length, cb)
+}
+
+File.prototype.getBlob = function (cb) {
+  if (typeof window === &#x27;undefined&#x27;) throw new Error(&#x27;browser-only method&#x27;)
+  streamToBlob(this.createReadStream(), this._getMimeType(), cb)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file.prototype.deselect" id="apidoc.element.webtorrent.file.prototype.deselect">
+        function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>deselect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deselect = function () {
+  if (this.length === 0) return
+  this._torrent.deselect(this._startPiece, this._endPiece, false)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+File.prototype.select = function (priority) {
+if (this.length === 0) return
+this._torrent.select(this._startPiece, this._endPiece, priority)
+}
+
+File.prototype.deselect = function () {
+if (this.length === 0) return
+this._torrent.<span class="apidocCodeKeywordSpan">deselect</span>(this._startPiece, this._endPiece, false)
+}
+
+File.prototype.createReadStream = function (opts) {
+var self = this
+if (this.length === 0) {
+  var empty = new stream.PassThrough()
+  process.nextTick(function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file.prototype.getBlob" id="apidoc.element.webtorrent.file.prototype.getBlob">
+        function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>getBlob
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBlob = function (cb) {
+  if (typeof window === &#x27;undefined&#x27;) throw new Error(&#x27;browser-only method&#x27;)
+  streamToBlob(this.createReadStream(), this._getMimeType(), cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file.prototype.getBlobURL" id="apidoc.element.webtorrent.file.prototype.getBlobURL">
+        function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>getBlobURL
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBlobURL = function (cb) {
+  if (typeof window === &#x27;undefined&#x27;) throw new Error(&#x27;browser-only method&#x27;)
+  streamToBlobURL(this.createReadStream(), this._getMimeType(), cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file.prototype.getBuffer" id="apidoc.element.webtorrent.file.prototype.getBuffer">
+        function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>getBuffer
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBuffer = function (cb) {
+  streamToBuffer(this.createReadStream(), this.length, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file.prototype.renderTo" id="apidoc.element.webtorrent.file.prototype.renderTo">
+        function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>renderTo
+        <span class="apidocSignatureSpan">(elem, opts, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">renderTo = function (elem, opts, cb) {
+  if (typeof window === &#x27;undefined&#x27;) throw new Error(&#x27;browser-only method&#x27;)
+  render.render(this, elem, opts, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file.prototype.select" id="apidoc.element.webtorrent.file.prototype.select">
+        function <span class="apidocSignatureSpan">webtorrent.file.prototype.</span>select
+        <span class="apidocSignatureSpan">(priority)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">select = function (priority) {
+  if (this.length === 0) return
+  this._torrent.select(this._startPiece, this._endPiece, priority)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+    return downloaded
+  }
+})
+
+File.prototype.select = function (priority) {
+  if (this.length === 0) return
+  this._torrent.<span class="apidocCodeKeywordSpan">select</span>(this._startPiece, this._endPiece, priority)
+}
+
+File.prototype.deselect = function () {
+  if (this.length === 0) return
+  this._torrent.deselect(this._startPiece, this._endPiece, false)
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webtorrent.file_stream" id="apidoc.module.webtorrent.file_stream">module webtorrent.file_stream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file_stream.file_stream" id="apidoc.element.webtorrent.file_stream.file_stream">
+        function <span class="apidocSignatureSpan">webtorrent.</span>file_stream
+        <span class="apidocSignatureSpan">(file, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FileStream(file, opts) {
+  stream.Readable.call(this, opts)
+
+  this.destroyed = false
+  this._torrent = file._torrent
+
+  var start = (opts &#x26;&#x26; opts.start) || 0
+  var end = (opts &#x26;&#x26; opts.end &#x26;&#x26; opts.end &#x3c; file.length)
+    ? opts.end
+    : file.length - 1
+
+  var pieceLength = file._torrent.pieceLength
+
+  this._startPiece = (start + file.offset) / pieceLength | 0
+  this._endPiece = (end + file.offset) / pieceLength | 0
+
+  this._piece = this._startPiece
+  this._offset = (start + file.offset) - (this._startPiece * pieceLength)
+
+  this._missing = end - start + 1
+  this._reading = false
+  this._notifying = false
+  this._criticalLength = Math.min((1024 * 1024 / pieceLength) | 0, 2)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file_stream.super_" id="apidoc.element.webtorrent.file_stream.super_">
+        function <span class="apidocSignatureSpan">webtorrent.file_stream.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Readable(options) {
+  Duplex = Duplex || require(&#x27;./_stream_duplex&#x27;);
+
+  if (!(this instanceof Readable)) return new Readable(options);
+
+  this._readableState = new ReadableState(options, this);
+
+  // legacy
+  this.readable = true;
+
+  if (options &#x26;&#x26; typeof options.read === &#x27;function&#x27;) this._read = options.read;
+
+  Stream.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webtorrent.file_stream.prototype" id="apidoc.module.webtorrent.file_stream.prototype">module webtorrent.file_stream.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file_stream.prototype._destroy" id="apidoc.element.webtorrent.file_stream.prototype._destroy">
+        function <span class="apidocSignatureSpan">webtorrent.file_stream.prototype.</span>_destroy
+        <span class="apidocSignatureSpan">(err, onclose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_destroy = function (err, onclose) {
+  if (this.destroyed) return
+  this.destroyed = true
+
+  if (!this._torrent.destroyed) {
+    this._torrent.deselect(this._startPiece, this._endPiece, true)
+  }
+
+  if (err) this.emit(&#x27;error&#x27;, err)
+  this.emit(&#x27;close&#x27;)
+  if (onclose) onclose()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  self._uploadSpeed = speedometer()
+
+  if (opts.dht !== false &#x26;&#x26; typeof DHT === &#x27;function&#x27; /* browser exclude */) {
+// use a single DHT instance for all torrents, so the routing table can be reused
+self.dht = new DHT(extend({ nodeId: self.nodeId }, opts.dht))
+
+self.dht.once(&#x27;error&#x27;, function (err) {
+  self.<span class="apidocCodeKeywordSpan">_destroy</span>(err)
+})
+
+self.dht.once(&#x27;listening&#x27;, function () {
+  var address = self.dht.address()
+  if (address) self.dhtPort = address.port
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file_stream.prototype._notify" id="apidoc.element.webtorrent.file_stream.prototype._notify">
+        function <span class="apidocSignatureSpan">webtorrent.file_stream.prototype.</span>_notify
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_notify = function () {
+  var self = this
+
+  if (!self._reading || self._missing === 0) return
+  if (!self._torrent.bitfield.get(self._piece)) {
+    return self._torrent.critical(self._piece, self._piece + self._criticalLength)
+  }
+
+  if (self._notifying) return
+  self._notifying = true
+
+  var p = self._piece
+  self._torrent.store.get(p, function (err, buffer) {
+    self._notifying = false
+    if (self.destroyed) return
+    if (err) return self._destroy(err)
+    debug(&#x27;read %s (length %s) (err %s)&#x27;, p, buffer.length, err &#x26;&#x26; err.message)
+
+    if (self._offset) {
+      buffer = buffer.slice(self._offset)
+      self._offset = 0
+    }
+
+    if (self._missing &#x3c; buffer.length) {
+      buffer = buffer.slice(0, self._missing)
+    }
+    self._missing -= buffer.length
+
+    debug(&#x27;pushing buffer of length %s&#x27;, buffer.length)
+    self._reading = false
+    self.push(buffer)
+
+    if (self._missing === 0) self.push(null)
+  })
+  self._piece += 1
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    empty.end()
+  })
+  return empty
+}
+
+var fileStream = new FileStream(self, opts)
+self._torrent.select(fileStream._startPiece, fileStream._endPiece, true, function () {
+  fileStream.<span class="apidocCodeKeywordSpan">_notify</span>()
+})
+eos(fileStream, function () {
+  if (self._destroyed) return
+  if (!self._torrent.destroyed) {
+    self._torrent.deselect(fileStream._startPiece, fileStream._endPiece, true)
+  }
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file_stream.prototype._read" id="apidoc.element.webtorrent.file_stream.prototype._read">
+        function <span class="apidocSignatureSpan">webtorrent.file_stream.prototype.</span>_read
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_read = function () {
+  if (this._reading) return
+  this._reading = true
+  this._notify()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.file_stream.prototype.destroy" id="apidoc.element.webtorrent.file_stream.prototype.destroy">
+        function <span class="apidocSignatureSpan">webtorrent.file_stream.prototype.</span>destroy
+        <span class="apidocSignatureSpan">(onclose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (onclose) {
+  this._destroy(null, onclose)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this._remove(torrentId, cb)
+}
+
+WebTorrent.prototype._remove = function (torrentId, cb) {
+var torrent = this.get(torrentId)
+if (!torrent) return
+this.torrents.splice(this.torrents.indexOf(torrent), 1)
+torrent.<span class="apidocCodeKeywordSpan">destroy</span>(cb)
+}
+
+WebTorrent.prototype.address = function () {
+if (!this.listening) return null
+return this._tcpPool
+  ? this._tcpPool.server.address()
+  : { address: &#x27;0.0.0.0&#x27;, family: &#x27;IPv4&#x27;, port: 0 }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webtorrent.rarity_map" id="apidoc.module.webtorrent.rarity_map">module webtorrent.rarity_map</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.rarity_map.rarity_map" id="apidoc.element.webtorrent.rarity_map.rarity_map">
+        function <span class="apidocSignatureSpan">webtorrent.</span>rarity_map
+        <span class="apidocSignatureSpan">(torrent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RarityMap(torrent) {
+  var self = this
+
+  self._torrent = torrent
+  self._numPieces = torrent.pieces.length
+  self._pieces = []
+
+  self._onWire = function (wire) {
+    self.recalculate()
+    self._initWire(wire)
+  }
+  self._onWireHave = function (index) {
+    self._pieces[index] += 1
+  }
+  self._onWireBitfield = function () {
+    self.recalculate()
+  }
+
+  self._torrent.wires.forEach(function (wire) {
+    self._initWire(wire)
+  })
+  self._torrent.on(&#x27;wire&#x27;, self._onWire)
+  self.recalculate()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webtorrent.rarity_map.prototype" id="apidoc.module.webtorrent.rarity_map.prototype">module webtorrent.rarity_map.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.rarity_map.prototype._cleanupWireEvents" id="apidoc.element.webtorrent.rarity_map.prototype._cleanupWireEvents">
+        function <span class="apidocSignatureSpan">webtorrent.rarity_map.prototype.</span>_cleanupWireEvents
+        <span class="apidocSignatureSpan">(wire)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_cleanupWireEvents = function (wire) {
+  wire.removeListener(&#x27;have&#x27;, this._onWireHave)
+  wire.removeListener(&#x27;bitfield&#x27;, this._onWireBitfield)
+  if (wire._onClose) wire.removeListener(&#x27;close&#x27;, wire._onClose)
+  wire._onClose = null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+}
+
+RarityMap.prototype.destroy = function () {
+var self = this
+self._torrent.removeListener(&#x27;wire&#x27;, self._onWire)
+self._torrent.wires.forEach(function (wire) {
+  self.<span class="apidocCodeKeywordSpan">_cleanupWireEvents</span>(wire)
+})
+self._torrent = null
+self._pieces = null
+
+self._onWire = null
+self._onWireHave = null
+self._onWireBitfield = null
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.rarity_map.prototype._initWire" id="apidoc.element.webtorrent.rarity_map.prototype._initWire">
+        function <span class="apidocSignatureSpan">webtorrent.rarity_map.prototype.</span>_initWire
+        <span class="apidocSignatureSpan">(wire)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_initWire = function (wire) {
+  var self = this
+
+  wire._onClose = function () {
+    self._cleanupWireEvents(wire)
+    for (var i = 0; i &#x3c; this._numPieces; ++i) {
+      self._pieces[i] -= wire.peerPieces.get(i)
+    }
+  }
+
+  wire.on(&#x27;have&#x27;, self._onWireHave)
+  wire.on(&#x27;bitfield&#x27;, self._onWireBitfield)
+  wire.once(&#x27;close&#x27;, wire._onClose)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+self._torrent = torrent
+self._numPieces = torrent.pieces.length
+self._pieces = []
+
+self._onWire = function (wire) {
+  self.recalculate()
+  self.<span class="apidocCodeKeywordSpan">_initWire</span>(wire)
+}
+self._onWireHave = function (index) {
+  self._pieces[index] += 1
+}
+self._onWireBitfield = function () {
+  self.recalculate()
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.rarity_map.prototype.destroy" id="apidoc.element.webtorrent.rarity_map.prototype.destroy">
+        function <span class="apidocSignatureSpan">webtorrent.rarity_map.prototype.</span>destroy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function () {
+  var self = this
+  self._torrent.removeListener(&#x27;wire&#x27;, self._onWire)
+  self._torrent.wires.forEach(function (wire) {
+    self._cleanupWireEvents(wire)
+  })
+  self._torrent = null
+  self._pieces = null
+
+  self._onWire = null
+  self._onWireHave = null
+  self._onWireBitfield = null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this._remove(torrentId, cb)
+}
+
+WebTorrent.prototype._remove = function (torrentId, cb) {
+var torrent = this.get(torrentId)
+if (!torrent) return
+this.torrents.splice(this.torrents.indexOf(torrent), 1)
+torrent.<span class="apidocCodeKeywordSpan">destroy</span>(cb)
+}
+
+WebTorrent.prototype.address = function () {
+if (!this.listening) return null
+return this._tcpPool
+  ? this._tcpPool.server.address()
+  : { address: &#x27;0.0.0.0&#x27;, family: &#x27;IPv4&#x27;, port: 0 }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.rarity_map.prototype.getRarestPiece" id="apidoc.element.webtorrent.rarity_map.prototype.getRarestPiece">
+        function <span class="apidocSignatureSpan">webtorrent.rarity_map.prototype.</span>getRarestPiece
+        <span class="apidocSignatureSpan">(pieceFilterFunc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRarestPiece = function (pieceFilterFunc) {
+  if (!pieceFilterFunc) pieceFilterFunc = trueFn
+
+  var candidates = []
+  var min = Infinity
+
+  for (var i = 0; i &#x3c; this._numPieces; ++i) {
+    if (!pieceFilterFunc(i)) continue
+
+    var availability = this._pieces[i]
+    if (availability === min) {
+      candidates.push(i)
+    } else if (availability &#x3c; min) {
+      candidates = [ i ]
+      min = availability
+    }
+  }
+
+  if (candidates.length &#x3e; 0) {
+    // if there are multiple pieces with the same availability, choose one randomly
+    return candidates[Math.random() * candidates.length | 0]
+  } else {
+    return -1
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webtorrent.rarity_map.prototype.recalculate" id="apidoc.element.webtorrent.rarity_map.prototype.recalculate">
+        function <span class="apidocSignatureSpan">webtorrent.rarity_map.prototype.</span>recalculate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">recalculate = function () {
+  var i
+  for (i = 0; i &#x3c; this._numPieces; ++i) {
+    this._pieces[i] = 0
+  }
+
+  var numWires = this._torrent.wires.length
+  for (i = 0; i &#x3c; numWires; ++i) {
+    var wire = this._torrent.wires[i]
+    for (var j = 0; j &#x3c; this._numPieces; ++j) {
+      this._pieces[j] += wire.peerPieces.get(j)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var self = this
+
+self._torrent = torrent
+self._numPieces = torrent.pieces.length
+self._pieces = []
+
+self._onWire = function (wire) {
+  self.<span class="apidocCodeKeywordSpan">recalculate</span>()
+  self._initWire(wire)
+}
+self._onWireHave = function (index) {
+  self._pieces[index] += 1
+}
+self._onWireBitfield = function () {
+  self.recalculate()
 ...</pre></li>
     </ul>
 
